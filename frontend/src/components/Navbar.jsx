@@ -57,6 +57,7 @@ const Navbar = () => {
         <NavItem to="/about" label="ABOUT" />
         <NavItem to="/contact" label="CONTACT" />
         <NavItem to="/pharmacy" label="PHARMACY" />
+        <NavItem to="/prescription-reader" label="PRESCRIPTION READER" />
       </ul>
 
       <div className="hidden md:flex items-center gap-4">
@@ -153,6 +154,8 @@ const Navbar = () => {
       <NavItem to="/doctors" label="ALL DOCTORS" onClick={() => setMenuOpen(false)} />
       <NavItem to="/about" label="ABOUT" onClick={() => setMenuOpen(false)} />
       <NavItem to="/contact" label="CONTACT" onClick={() => setMenuOpen(false)} />
+      <NavItem to="/pharmacy" label="PHARMACY" onClick={() => setMenuOpen(false)} />
+      <NavItem to="/prescription-reader" label="PRESCRIPTION READER" onClick={() => setMenuOpen(false)} />
 
       {token ? (
         <>

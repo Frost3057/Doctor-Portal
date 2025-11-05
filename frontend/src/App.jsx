@@ -16,6 +16,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import UserChatPage from './pages/UserChatPage';
 import Pharmacy from './pages/Pharmacy';
+import PrescriptionReaderPage from './pages/PrescriptionReader';
 const App = () => {
   const location = useLocation();
 
@@ -39,6 +40,7 @@ const App = () => {
           <Route path='/appointment/:docId' element={<Appointment />} />
           <Route path='/chat' element={<UserChatPage />} />
           <Route path='/pharmacy' element={<Pharmacy />} />
+          <Route path='/prescription-reader' element={<PrescriptionReaderPage />} />
           <Route path='/my-orders' element={<MyOrders />} />
         </Routes>
         {!shouldHideLayout && <Footer />}

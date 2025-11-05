@@ -9,6 +9,7 @@ import userRouter from './routes/userRoutes.js';
 import pharmacyRouter from './routes/pharmacyRoutes.js';
 import messageRouter from './routes/messageRoutes.js';
 import orderRouter from './routes/orderRoutes.js';
+import prescriptionRouter from './routes/prescriptionRoutes.js';
 import http from 'http';
 import { Server } from 'socket.io';
 import jwt from 'jsonwebtoken';
@@ -97,6 +98,7 @@ app.use('/api/user', userRouter);
 app.use('/api/messages', messageRouter); 
 app.use('/api/pharmacy', pharmacyRouter);
 app.use('/api/orders', orderRouter);
+app.use('/api', prescriptionRouter);
 
 app.get('/', (req, res) => {
   res.send('Hello from server');
