@@ -93,7 +93,6 @@ router.post('/read-prescription', upload.single('prescription'), async (req, res
   let uploadedFilePath = null;
 
   try {
-    // Check if file was uploaded
     if (!req.file) {
       return res.status(400).json({
         success: false,
@@ -102,8 +101,7 @@ router.post('/read-prescription', upload.single('prescription'), async (req, res
     }
 
     uploadedFilePath = req.file.path;
-
-    // Check if Google API key is configured
+    
     if (!process.env.GOOGLE_API_KEY) {
       return res.status(500).json({
         success: false,
