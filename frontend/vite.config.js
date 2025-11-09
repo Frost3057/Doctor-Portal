@@ -18,9 +18,7 @@ export default defineConfig({
     }
   },
   resolve: {
-    alias: {
-      '@admin': path.resolve(__dirname, '../admin/src')
-    }
+    alias: {}
   },
   theme: {
     extend: {
