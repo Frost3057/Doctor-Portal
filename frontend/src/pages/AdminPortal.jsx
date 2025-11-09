@@ -1,12 +1,8 @@
 import React from 'react';
-import '@admin/index.css';
-import AdminRoot from '@admin/AdminRoot.jsx';
-import AdminApp from '@admin/App.jsx';
+// Admin app disabled for now
 
 const AdminPortal = () => (
-  <AdminRoot>
-    <AdminApp />
-  </AdminRoot>
+  <div>Admin portal is currently disabled</div>
 );
 
 export default AdminPortal;
