@@ -1,6 +1,6 @@
+import './config/env.js';
 import express from 'express';
 import cors from 'cors';
-import 'dotenv/config';
 import connectDB from './config/mongoDb.js';
 import connectCloudinary from './config/cloudinary.js';
 import adminRouter from './routes/adminRoutes.js';
@@ -14,7 +14,6 @@ import http from 'http';
 import { Server } from 'socket.io';
 import jwt from 'jsonwebtoken';
 import Chat from './models/chatModel.js'; 
-
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -55,7 +54,6 @@ io.on('connection', (socket) => {
     try {
         const { appointmentId, message } = data;
         const senderId = socket.userId;
-        
         const chat = await Chat.findOne({ appointmentId });
 
         const senderModel = chat.patientId.toString() === senderId ? 'User' : 'Doctor';

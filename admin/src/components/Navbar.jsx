@@ -16,11 +16,11 @@ const Navbar = () => {
         if (aToken) {
             localStorage.removeItem('aToken');
             setAToken('');
-            navigate('/admin-login');
+            navigate('/admin/login');
         } else if (dToken) {
             localStorage.removeItem('dToken');
             setDToken('');
-            navigate('/doctor-login');
+            navigate('/admin/login');
         }
         setShowDropdown(false);
     };
@@ -87,7 +87,7 @@ const Navbar = () => {
                                 {dToken && (
                                     <button
                                         onClick={() => {
-                                            navigate('/doctor-profile');
+                                            navigate('/admin/doctor-profile');
                                             setShowDropdown(false);
                                         }}
                                         className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center gap-2"

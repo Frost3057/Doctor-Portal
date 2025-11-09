@@ -364,12 +364,12 @@ const DoctorDashboard = () => {
           <div className="bg-white rounded-lg shadow-md border p-4 sm:p-6">
             <h3 className="text-lg font-semibold text-gray-800 mb-4">Quick Actions</h3>
             <div className="space-y-3">
-              <button onClick={()=>Navigate('/doctor-appointments')} className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-sm">
+              <button onClick={()=>Navigate('/admin/doctor-appointments')} className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-sm">
                 <FaCalendarAlt className="inline mr-2" />
                 View All Appointments
               </button>
               
-              <button onClick={()=>Navigate('/doctor-profile')} className="w-full bg-purple-500 hover:bg-purple-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-sm">
+              <button onClick={()=>Navigate('/admin/doctor-profile')} className="w-full bg-purple-500 hover:bg-purple-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-sm">
                 <FaUser className="inline mr-2" />
                 Edit Profile
               </button>

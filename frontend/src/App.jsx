@@ -17,12 +17,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import UserChatPage from './pages/UserChatPage';
 import Pharmacy from './pages/Pharmacy';
 import PrescriptionReaderPage from './pages/PrescriptionReader';
+import AdminPortal from './pages/AdminPortal.jsx';
 const App = () => {
   const location = useLocation();
 
   const hideLayoutOnPaths = ['/login'];
-
-  const shouldHideLayout = hideLayoutOnPaths.includes(location.pathname);
+  const shouldHideLayout =
+    hideLayoutOnPaths.includes(location.pathname) ||
+    location.pathname.startsWith('/admin');
   
   return (
     <UserProvider>
@@ -42,20 +44,23 @@ const App = () => {
           <Route path='/pharmacy' element={<Pharmacy />} />
           <Route path='/prescription-reader' element={<PrescriptionReaderPage />} />
           <Route path='/my-orders' element={<MyOrders />} />
+          <Route path='/admin/*' element={<AdminPortal />} />
         </Routes>
         {!shouldHideLayout && <Footer />}
-        <ToastContainer
-          position="top-right"
-          autoClose={3000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="light"
-        />
+        {!location.pathname.startsWith('/admin') && (
+          <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+          />
+        )}
       </div>
     </UserProvider>
   );

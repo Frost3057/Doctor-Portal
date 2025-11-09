@@ -1,18 +1,31 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    tailwindcss(), 
-    react()
-  ],
-  server:{port:8000},
-  theme:{
+  envDir: '..',
+  plugins: [tailwindcss(), react()],
+  server: {
+    port: 8000,
+    fs: {
+      allow: [path.resolve(__dirname, '..')]
+    }
+  },
+  resolve: {
+    alias: {
+      '@admin': path.resolve(__dirname, '../admin/src')
+    }
+  },
+  theme: {
     extend: {
-      colors:{
-        primary:"5f6FFF"
+      colors: {
+        primary: '5f6FFF'
       }
     }
   }

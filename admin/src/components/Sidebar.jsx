@@ -25,11 +25,11 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
     if (aToken) {
       setAToken('')
       localStorage.removeItem('aToken')
-      navigate('/admin-login')
+      navigate('/admin/login')
     } else if (dToken) {
       setDToken('')
       localStorage.removeItem('dToken')
-      navigate('/doctor-login')
+      navigate('/admin/login')
     }
   }
 
@@ -78,7 +78,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
             <ul className="text-gray-600 mt-5 space-y-1">
               <li>
                 <NavLink 
-                  to='/admin-dashboard' 
+                  to='dashboard' 
                   onClick={handleLinkClick} 
                   className={({isActive}) => `flex items-center gap-3 py-3 px-4 md:px-6 cursor-pointer transition-all duration-200 hover:bg-gray-50 ${isActive ? 'bg-blue-50 border-r-4 border-blue-500 text-blue-600' : 'text-gray-600 hover:text-gray-800'}`}
                 >
@@ -89,7 +89,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               
               <li>
                 <NavLink 
-                  to='/all-appointments' 
+                  to='all-appointments' 
                   onClick={handleLinkClick} 
                   className={({isActive}) => `flex items-center gap-3 py-3 px-4 md:px-6 cursor-pointer transition-all duration-200 hover:bg-gray-50 ${isActive ? 'bg-blue-50 border-r-4 border-blue-500 text-blue-600' : 'text-gray-600 hover:text-gray-800'}`}
                 >
@@ -100,7 +100,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               
               <li>
                 <NavLink 
-                  to='/add-doctor' 
+                  to='add-doctor' 
                   onClick={handleLinkClick} 
                   className={({isActive}) => `flex items-center gap-3 py-3 px-4 md:px-6 cursor-pointer transition-all duration-200 hover:bg-gray-50 ${isActive ? 'bg-blue-50 border-r-4 border-blue-500 text-blue-600' : 'text-gray-600 hover:text-gray-800'}`}
                 >
@@ -111,7 +111,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               
               <li>
                 <NavLink 
-                  to='/doctor-list' 
+                  to='doctor-list' 
                   onClick={handleLinkClick} 
                   className={({isActive}) => `flex items-center gap-3 py-3 px-4 md:px-6 cursor-pointer transition-all duration-200 hover:bg-gray-50 ${isActive ? 'bg-blue-50 border-r-4 border-blue-500 text-blue-600' : 'text-gray-600 hover:text-gray-800'}`}
                 >
@@ -122,7 +122,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               
               <li>
                 <NavLink 
-                  to='/pharmacy' 
+                  to='pharmacy' 
                   onClick={handleLinkClick} 
                   className={({isActive}) => `flex items-center gap-3 py-3 px-4 md:px-6 cursor-pointer transition-all duration-200 hover:bg-gray-50 ${isActive ? 'bg-blue-50 border-r-4 border-blue-500 text-blue-600' : 'text-gray-600 hover:text-gray-800'}`}
                 >
@@ -133,7 +133,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               
               <li>
                 <NavLink 
-                  to='/orders' 
+                  to='orders' 
                   onClick={handleLinkClick} 
                   className={({isActive}) => `flex items-center gap-3 py-3 px-4 md:px-6 cursor-pointer transition-all duration-200 hover:bg-gray-50 ${isActive ? 'bg-blue-50 border-r-4 border-blue-500 text-blue-600' : 'text-gray-600 hover:text-gray-800'}`}
                 >
@@ -148,7 +148,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
             <ul className="text-gray-600 mt-5 space-y-1">
               <li>
                 <NavLink 
-                  to='/doctor-dashboard' 
+                  to='doctor-dashboard' 
                   onClick={handleLinkClick} 
                   className={({isActive}) => `flex items-center gap-3 py-3 px-4 md:px-6 cursor-pointer transition-all duration-200 hover:bg-gray-50 ${isActive ? 'bg-blue-50 border-r-4 border-blue-500 text-blue-600' : 'text-gray-600 hover:text-gray-800'}`}
                 >
@@ -159,7 +159,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               
               <li>
                 <NavLink 
-                  to='/doctor-appointments' 
+                  to='doctor-appointments' 
                   onClick={handleLinkClick} 
                   className={({isActive}) => `flex items-center gap-3 py-3 px-4 md:px-6 cursor-pointer transition-all duration-200 hover:bg-gray-50 ${isActive ? 'bg-blue-50 border-r-4 border-blue-500 text-blue-600' : 'text-gray-600 hover:text-gray-800'}`}
                 >
@@ -170,7 +170,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               
               <li>
                 <NavLink 
-                  to='/doctor-chat' 
+                  to='doctor-chat' 
                   onClick={handleLinkClick}
                   className={({isActive}) => `flex items-center gap-3 py-3 px-4 md:px-6 cursor-pointer transition-all duration-200 hover:bg-gray-50 ${isActive ? 'bg-blue-50 border-r-4 border-blue-500 text-blue-600' : 'text-gray-600 hover:text-gray-800'}`}
                 >
@@ -181,7 +181,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
               <li>
                 <NavLink 
-                  to='/doctor-profile' 
+                  to='doctor-profile' 
                   onClick={handleLinkClick} 
                   className={({isActive}) => `flex items-center gap-3 py-3 px-4 md:px-6 cursor-pointer transition-all duration-200 hover:bg-gray-50 ${isActive ? 'bg-blue-50 border-r-4 border-blue-500 text-blue-600' : 'text-gray-600 hover:text-gray-800'}`}
                 >

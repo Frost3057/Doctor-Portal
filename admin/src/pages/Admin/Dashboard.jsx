@@ -295,15 +295,15 @@ const Dashboard = () => {
           <div className="bg-white rounded-lg shadow-md border p-4 sm:p-6">
             <h3 className="text-lg font-semibold text-gray-800 mb-4">Quick Actions</h3>
             <div className="space-y-3">
-              <button onClick={()=>Navigate('/add-doctor')} className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-sm">
+              <button onClick={()=>Navigate('add-doctor')} className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-sm">
                 <FaUserMd className="inline mr-2" />
                 Add New Doctor
               </button>
-              <button onClick={()=>Navigate('/all-appointments')} className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-sm">
+              <button onClick={()=>Navigate('all-appointments')} className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-sm">
                 <FaCalendarAlt className="inline mr-2" />
                 View All Appointments
               </button>
-              <button onClick={()=>Navigate('/doctor-list')} className="w-full bg-purple-500 hover:bg-purple-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-sm">
+              <button onClick={()=>Navigate('doctor-list')} className="w-full bg-purple-500 hover:bg-purple-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-sm">
                 <FaUser className="inline mr-2" />
                 Manage Doctors
               </button>

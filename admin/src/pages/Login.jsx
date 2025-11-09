@@ -31,11 +31,10 @@ const Login = () => {
                 });
                 const { data } = response;
                 if (data.success) {
-                    console.log("Login successful, token:", data.token);
                     setAToken(data.token);
                     localStorage.setItem('aToken', data.token);
                     toast.success(data.message || "Login successful!");
-                    Navigate('/admin-dashboard');
+                    Navigate('/admin/dashboard');
                 } else {
                     toast.error(data.message || "Login failed");
                 }
@@ -49,7 +48,7 @@ const Login = () => {
                     localStorage.setItem('Dtoken', data.token);
                     setDToken(data.token);
                     toast.success(data.message || "Login successful!");
-                    Navigate('/doctor-dashboard');
+                    Navigate('/admin/doctor-dashboard');
                     
                 } else {
                     toast.error(data.message || "Login failed");

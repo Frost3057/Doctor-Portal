@@ -1,0 +1,16 @@
+{
+  "name": "doctor-portal-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+  "dev": "concurrently -k -n backend,frontend \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:reader": "npm --prefix frontend/server run dev",
+    "install:all": "npm --prefix backend install && npm --prefix admin install && npm --prefix frontend install && npm --prefix frontend/server install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
